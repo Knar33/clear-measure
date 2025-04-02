@@ -84,7 +84,7 @@ namespace UnitTests
             };
 
             int counter = 1;
-            await foreach (var partialResult in DivisibleCounter.Count(0, divisors))
+            await foreach (var partialResult in DivisibleCounter.Count(10, divisors))
             {
                 if (counter % 2 == 0)
                 {
