@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35919.96 d17.13
+VisualStudioVersion = 17.13.35919.96
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp", "ConsoleApp\ConsoleApp.csproj", "{49D27BBB-71F5-476D-969A-06E641B70924}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary1", "ClassLibrary1\ClassLibrary1.csproj", "{F794F3E1-8418-4315-BD52-D94E3E6D1688}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DivisibleLib", "DivisibleLib\DivisibleLib.csproj", "{563B2B66-099F-7F30-4B65-ABF332444163}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{49D27BBB-71F5-476D-969A-06E641B70924}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{49D27BBB-71F5-476D-969A-06E641B70924}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{49D27BBB-71F5-476D-969A-06E641B70924}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F794F3E1-8418-4315-BD52-D94E3E6D1688}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F794F3E1-8418-4315-BD52-D94E3E6D1688}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F794F3E1-8418-4315-BD52-D94E3E6D1688}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F794F3E1-8418-4315-BD52-D94E3E6D1688}.Release|Any CPU.Build.0 = Release|Any CPU
+		{563B2B66-099F-7F30-4B65-ABF332444163}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{563B2B66-099F-7F30-4B65-ABF332444163}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{563B2B66-099F-7F30-4B65-ABF332444163}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{563B2B66-099F-7F30-4B65-ABF332444163}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

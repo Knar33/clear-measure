@@ -1,4 +1,4 @@
-﻿using ClassLibrary1;
+﻿using DivisibleLib;
 
 
 //numers 1-100 printed to screen
