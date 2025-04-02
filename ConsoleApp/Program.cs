@@ -2,8 +2,11 @@
 using System.Reflection.Emit;
 
 //TODO: 
-//enhancement: parameratize name, number and word pairs (arbitrary number of number/word pairs)
 //add unit test project, add unit tests to prove that it works, add regression tests
+    //Test cases:
+        //divisor is 0
+        //upper bound is negative 
+        //
 
 Dictionary<int, string> divisors = new()
 {

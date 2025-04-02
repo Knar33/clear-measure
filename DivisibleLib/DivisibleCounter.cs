@@ -17,6 +17,7 @@ namespace DivisibleLib
                 var divisible = false;
                 foreach (var (divisor, text) in divisors)
                 {
+                    if (divisor == 0) continue;
                     if (i % divisor == 0)
                     {
                         partialResult += $"{text} ";
