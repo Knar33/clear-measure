@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -8,12 +9,12 @@ namespace DivisibleLib
 {
     public class DivisibleCounter
     {
-        public static string Count(int upperBound)
+        public static async IAsyncEnumerable<string> Count(int upperBound, [EnumeratorCancellation] CancellationToken cancellationToken = default)
         {
-            string countResult = "";
-
             for (int i = 1; i <= upperBound; i++)
             {
+                string partialResult = "";
+
                 var divisibleByThree = false;
                 var divisibleByFive = false;
                 if (i % 3 == 0)
@@ -27,20 +28,21 @@ namespace DivisibleLib
 
                 if (!divisibleByThree && !divisibleByFive)
                 {
-                    countResult += $"{i} ";
+                    partialResult += $"{i} ";
                 }
 
                 if (divisibleByThree)
                 {
-                    countResult += "FirstName ";
+                    partialResult += "FirstName ";
                 }
                 if (divisibleByFive)
                 {
-                    countResult += "LastName";
+                    partialResult += "LastName";
                 }
-                countResult += "\n";
+                partialResult += "\n";
+
+                yield return partialResult;
             }
-            return countResult;
         }
     }
 }
