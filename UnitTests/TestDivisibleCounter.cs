@@ -42,5 +42,39 @@ namespace UnitTests
 
             Assert.AreEqual("1\n", result.ToString());
         }
+
+        [TestMethod]
+        public async Task NegativeUpperBound()
+        {
+            Dictionary<int, string> divisors = new()
+            {
+                [1] = "test"
+            };
+
+            StringBuilder result = new StringBuilder();
+            await foreach (var partialResult in DivisibleCounter.Count(-1, divisors))
+            {
+                result.Append(partialResult);
+            }
+
+            Assert.AreEqual("", result.ToString());
+        }
+
+        [TestMethod]
+        public async Task ZeroUpperBound()
+        {
+            Dictionary<int, string> divisors = new()
+            {
+                [1] = "test"
+            };
+
+            StringBuilder result = new StringBuilder();
+            await foreach (var partialResult in DivisibleCounter.Count(0, divisors))
+            {
+                result.Append(partialResult);
+            }
+
+            Assert.AreEqual("", result.ToString());
+        }
     }
 }
