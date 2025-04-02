@@ -9,7 +9,7 @@ namespace DivisibleLib
 {
     public class DivisibleCounter
     {
-        public static async IAsyncEnumerable<string> Count(int upperBound, Dictionary<int, string> divisors, [EnumeratorCancellation] CancellationToken cancellationToken = default)
+        public static async IAsyncEnumerable<string> Count(int upperBound, Dictionary<int, string> divisors, [EnumeratorCancellation] CancellationToken cancellationToken = default, string separator = "\n")
         {
             for (int i = 1; i <= upperBound; i++)
             {
@@ -27,11 +27,11 @@ namespace DivisibleLib
                 }
                 if (divisible)
                 {
-                    yield return $"{string.Join(" ", divisorHits)}\n";
+                    yield return $"{string.Join(" ", divisorHits)}{separator}";
                 }
                 else
                 {
-                    yield return $"{i}\n";
+                    yield return $"{i}{separator}";
                 }
             }
         }

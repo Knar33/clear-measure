@@ -97,5 +97,22 @@ namespace UnitTests
                 counter++;
             }
         }
+
+        [TestMethod]
+        public async Task HtmlSeparator()
+        {
+            Dictionary<int, string> divisors = new()
+            {
+                [2] = "test"
+            };
+
+            StringBuilder result = new StringBuilder();
+            await foreach (var partialResult in DivisibleCounter.Count(10, divisors, separator: "<br />"))
+            {
+                result.Append(partialResult);
+            }
+
+            Assert.AreEqual("1<br />test<br />3<br />test<br />5<br />test<br />7<br />test<br />9<br />test<br />", result.ToString());
+        }
     }
 }
