@@ -76,5 +76,28 @@ namespace UnitTests
 
             Assert.AreEqual("", result.ToString());
         }
+
+        [TestMethod]
+        public async Task StreamingResults()
+        {
+            Dictionary<int, string> divisors = new()
+            {
+                [2] = "test"
+            };
+
+            int counter = 1;
+            await foreach (var partialResult in DivisibleCounter.Count(0, divisors))
+            {
+                if (counter % 2 == 0)
+                {
+                    Assert.AreEqual("test \n", partialResult.ToString());
+                }
+                else
+                {
+                    Assert.AreEqual($"{counter}\n", partialResult.ToString());
+                }
+                counter++;
+            }
+        }
     }
 }
