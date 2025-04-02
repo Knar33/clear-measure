@@ -9,35 +9,23 @@ namespace DivisibleLib
 {
     public class DivisibleCounter
     {
-        public static async IAsyncEnumerable<string> Count(int upperBound, [EnumeratorCancellation] CancellationToken cancellationToken = default)
+        public static async IAsyncEnumerable<string> Count(int upperBound, Dictionary<int, string> divisors, [EnumeratorCancellation] CancellationToken cancellationToken = default)
         {
             for (int i = 1; i <= upperBound; i++)
             {
                 string partialResult = "";
-
-                var divisibleByThree = false;
-                var divisibleByFive = false;
-                if (i % 3 == 0)
+                var divisible = false;
+                foreach (var (divisor, text) in divisors)
                 {
-                    divisibleByThree = true;
+                    if (i % divisor == 0)
+                    {
+                        partialResult += $"{text} ";
+                        divisible = true;
+                    }
                 }
-                if (i % 5 == 0)
+                if (!divisible)
                 {
-                    divisibleByFive = true;
-                }
-
-                if (!divisibleByThree && !divisibleByFive)
-                {
-                    partialResult += $"{i} ";
-                }
-
-                if (divisibleByThree)
-                {
-                    partialResult += "FirstName ";
-                }
-                if (divisibleByFive)
-                {
-                    partialResult += "LastName";
+                    partialResult = $"{i}";
                 }
                 partialResult += "\n";
 
