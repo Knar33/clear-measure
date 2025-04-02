@@ -13,24 +13,26 @@ namespace DivisibleLib
         {
             for (int i = 1; i <= upperBound; i++)
             {
-                string partialResult = "";
                 var divisible = false;
+                List<string> divisorHits = new List<string>();
+
                 foreach (var (divisor, text) in divisors)
                 {
                     if (divisor == 0) continue;
                     if (i % divisor == 0)
                     {
-                        partialResult += $"{text} ";
+                        divisorHits.Add(text);
                         divisible = true;
                     }
                 }
-                if (!divisible)
+                if (divisible)
                 {
-                    partialResult = $"{i}";
+                    yield return $"{string.Join(" ", divisorHits)}\n";
                 }
-                partialResult += "\n";
-
-                yield return partialResult;
+                else
+                {
+                    yield return $"{i}\n";
+                }
             }
         }
     }
