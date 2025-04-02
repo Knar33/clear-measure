@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp", "ConsoleApp\Co
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DivisibleLib", "DivisibleLib\DivisibleLib.csproj", "{563B2B66-099F-7F30-4B65-ABF332444163}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "UnitTests\UnitTests.csproj", "{3558729B-E951-4995-AE9B-AFD3B68F2A83}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{563B2B66-099F-7F30-4B65-ABF332444163}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{563B2B66-099F-7F30-4B65-ABF332444163}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{563B2B66-099F-7F30-4B65-ABF332444163}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3558729B-E951-4995-AE9B-AFD3B68F2A83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3558729B-E951-4995-AE9B-AFD3B68F2A83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3558729B-E951-4995-AE9B-AFD3B68F2A83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3558729B-E951-4995-AE9B-AFD3B68F2A83}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
